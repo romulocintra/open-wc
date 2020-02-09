@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/open-wc/open-wc/compare/polyfills-loader@1.2.0...polyfills-loader@1.2.1) (2020-02-09)
+
+**Note:** Version bump only for package polyfills-loader
+
+
+
+
+
+# [1.2.0](https://github.com/open-wc/open-wc/compare/polyfills-loader@1.1.2...polyfills-loader@1.2.0) (2020-02-06)
+
+
+### Features
+
+* **polyfills-loader:** add shady css scoped polyfill ([3c0bc88](https://github.com/open-wc/open-wc/commit/3c0bc88f0e67806abbb901d689b01c565261b6e0))
+
+
+
+
+
+## [1.1.2](https://github.com/open-wc/open-wc/compare/polyfills-loader@1.1.1...polyfills-loader@1.1.2) (2020-02-03)
+
+
+### Bug Fixes
+
+* **polyfills-loader:** don't read user babel config ([9ea41cd](https://github.com/open-wc/open-wc/commit/9ea41cddc934de394b80853a75ad070e3b6edd05))
+
+
+
+
+
+## [1.1.1](https://github.com/open-wc/open-wc/compare/polyfills-loader@1.1.0...polyfills-loader@1.1.1) (2020-02-02)
+
+**Note:** Version bump only for package polyfills-loader
+
+
+
+
+
 # 1.1.0 (2020-01-31)
 
 

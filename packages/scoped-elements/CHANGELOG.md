@@ -3,6 +3,62 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.12](https://github.com/open-wc/open-wc/compare/@open-wc/scoped-elements@0.2.11...@open-wc/scoped-elements@0.2.12) (2020-02-09)
+
+**Note:** Version bump only for package @open-wc/scoped-elements
+
+
+
+
+
+## [0.2.11](https://github.com/open-wc/open-wc/compare/@open-wc/scoped-elements@0.2.10...@open-wc/scoped-elements@0.2.11) (2020-02-09)
+
+**Note:** Version bump only for package @open-wc/scoped-elements
+
+
+
+
+
+## [0.2.10](https://github.com/open-wc/open-wc/compare/@open-wc/scoped-elements@0.2.9...@open-wc/scoped-elements@0.2.10) (2020-02-06)
+
+**Note:** Version bump only for package @open-wc/scoped-elements
+
+
+
+
+
+## [0.2.9](https://github.com/open-wc/open-wc/compare/@open-wc/scoped-elements@0.2.8...@open-wc/scoped-elements@0.2.9) (2020-02-06)
+
+**Note:** Version bump only for package @open-wc/scoped-elements
+
+
+
+
+
+## [0.2.8](https://github.com/open-wc/open-wc/compare/@open-wc/scoped-elements@0.2.7...@open-wc/scoped-elements@0.2.8) (2020-02-03)
+
+**Note:** Version bump only for package @open-wc/scoped-elements
+
+
+
+
+
+## [0.2.7](https://github.com/open-wc/open-wc/compare/@open-wc/scoped-elements@0.2.6...@open-wc/scoped-elements@0.2.7) (2020-02-03)
+
+**Note:** Version bump only for package @open-wc/scoped-elements
+
+
+
+
+
+## [0.2.6](https://github.com/open-wc/open-wc/compare/@open-wc/scoped-elements@0.2.5...@open-wc/scoped-elements@0.2.6) (2020-02-02)
+
+**Note:** Version bump only for package @open-wc/scoped-elements
+
+
+
+
+
 ## [0.2.5](https://github.com/open-wc/open-wc/compare/@open-wc/scoped-elements@0.2.3...@open-wc/scoped-elements@0.2.5) (2020-01-31)
 
 

@@ -10,6 +10,7 @@ const { createOrderedExports } = require('../shared/createOrderedExports');
 const createAssets = require('../shared/getAssets');
 const listFiles = require('../shared/listFiles');
 const toBrowserPath = require('../shared/toBrowserPath');
+const { injectStories } = require('../shared/injectStories');
 
 const injectOrderedExportsPlugin = storyFiles => ({
   async transform(code, id) {
@@ -151,12 +152,28 @@ async function buildManager({ outputDir, assets }) {
   await rollupBuild(configs[1]);
 }
 
-async function buildPreview({ outputDir, assets, storyFiles, rollupConfigDecorator }) {
+async function buildPreview({
+  outputDir,
+  assets: { iframeHTML },
+  previewPath,
+  previewConfigImport,
+  storiesPatterns,
+  rollupConfigDecorator,
+}) {
+  const { html, storyFiles } = await injectStories({
+    iframeHTML,
+    previewImport: previewPath,
+    previewConfigImport,
+    storiesPatterns,
+    absolutePath: false,
+    rootDir: process.cwd(),
+  });
+
   const transformMdxToJs = createMdxToJsTransformer();
   let configs = createRollupConfigs({
     outputDir,
     indexFilename: 'iframe.html',
-    indexHTMLString: assets.iframeHTML,
+    indexHTMLString: html,
   });
 
   const transformMdxPlugin = {
@@ -195,8 +212,7 @@ module.exports = async function build({
   outputDir,
   managerPath,
   previewPath,
-  storyFiles,
-  storyUrls,
+  storiesPatterns,
   rollupConfigDecorator,
 }) {
   const managerPathRelative = `/${path.relative(process.cwd(), require.resolve(managerPath))}`;
@@ -204,15 +220,22 @@ module.exports = async function build({
 
   const assets = createAssets({
     storybookConfigDir,
-    rootDir: process.cwd(),
-    previewImport: previewPath,
     managerImport,
-    storyUrls,
   });
+
+  const previewConfigPath = path.join(process.cwd(), storybookConfigDir, 'preview.js');
+  const previewConfigImport = fs.existsSync(previewConfigPath) ? previewConfigPath : undefined;
 
   await fs.remove(outputDir);
   await fs.mkdirp(outputDir);
 
   await buildManager({ outputDir, assets });
-  await buildPreview({ outputDir, assets, storyFiles, rollupConfigDecorator });
+  await buildPreview({
+    outputDir,
+    assets,
+    storiesPatterns,
+    previewPath,
+    previewConfigImport,
+    rollupConfigDecorator,
+  });
 };
