@@ -86,4 +86,3 @@ npm run test:bs
 # run commands only for a specific scope
 lerna run <command> --scope @open-wc/<package-name> --stream
 ```
-
