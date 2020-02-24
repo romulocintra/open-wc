@@ -66,6 +66,7 @@ module.exports = userOptions => {
         'browser',
         'main',
       ],
+      modules: ['node_modules', 'web_modules'],
     },
 
     module: {
@@ -140,6 +141,7 @@ module.exports = userOptions => {
       production &&
         options.plugins.workbox &&
         new GenerateSW({
+          exclude: [/legacy\/.*.js/],
           // for spa client side routing, always return index.html
           navigateFallback: '/index.html',
           // where to output the generated sw

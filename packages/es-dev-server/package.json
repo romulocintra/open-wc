@@ -1,6 +1,6 @@
 {
   "name": "es-dev-server",
-  "version": "1.39.1",
+  "version": "1.40.1",
   "publishConfig": {
     "access": "public"
   },
@@ -39,6 +39,7 @@
     "start:transformers": "yarn build && node dist/cli.js -c demo/response-transformers/server.js",
     "start:typescript": "yarn build && node dist/cli.js -c demo/typescript/server.js --open --watch",
     "start:web-components": "yarn build && node dist/cli.js -c demo/web-components/server.js --open --watch",
+    "start:web-modules": "yarn build && node dist/cli.js -c demo/web-modules/server.js --open --watch",
     "test": "npm run test:node",
     "test:node": "mocha test/**/*.test.js test/*.test.js --require @babel/register",
     "test:update-snapshots": "mocha test/**/*.test.js test/*.test.js --require @babel/register --update-snapshots"
@@ -65,7 +66,7 @@
     "@babel/plugin-syntax-optional-chaining": "^7.8.3",
     "@babel/plugin-transform-template-literals": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
-    "@open-wc/building-utils": "^2.14.1",
+    "@open-wc/building-utils": "^2.14.3",
     "@rollup/plugin-node-resolve": "^6.1.0",
     "@rollup/pluginutils": "^3.0.0",
     "@types/minimatch": "^3.0.3",
@@ -93,7 +94,7 @@
     "opn": "^5.4.0",
     "parse5": "^5.1.0",
     "path-is-inside": "^1.0.2",
-    "polyfills-loader": "^1.2.1",
+    "polyfills-loader": "^1.2.3",
     "portfinder": "^1.0.21",
     "strip-ansi": "^5.2.0",
     "useragent": "^2.3.0",
