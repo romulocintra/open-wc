@@ -18,14 +18,14 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '10.16'     
-      - name: Restore cached NODE modules
-        uses: actions/cache@v1
-        with:
-          path: node_modules
-          key: v4-dependencies-${{ hashFiles('yarn.lock') }}
-          restore-keys: |
-            v4-dependencies-${{ hashFiles('yarn.lock') }}
-            v4-dependencies- 
+    # - name: Restore cached NODE modules
+    #   uses: actions/cache@v1
+    #   with:
+    #     path: node_modules
+    #     key: v4-dependencies-${{ hashFiles('yarn.lock') }}
+    #     restore-keys: |
+    #       v4-dependencies-${{ hashFiles('yarn.lock') }}
+    #       v4-dependencies- 
       - name: "YARN install"
         run: yarn install --frozen-lockfile
       - name: "NPM run build"
